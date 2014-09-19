@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">	
+		$(document).ready(function(){
+
+			var word = prompt("Palimdrone Test: Enter Word:");
+			//Test what word is
+
+			console.log(word);
+
+			function checkPalin(word){
+				var invertedWord = word.split("").reverse().join("");
+					console.log(invertedWord);
+				var answer = "";
+
+				if (word == invertedWord){
+					
+					answer = "Yep. It's a Palindrome!";
+				}else{
+					answer = "Nope. Not a Palindrome! :( ";
+				}
+				return answer;
+
+			}
+
+			alert(checkPalin(word));
+
+		});
+
+	</script>
+	
+</body>
+</html>
